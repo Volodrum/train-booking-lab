@@ -1,0 +1,13 @@
+.selectorContainer { margin-bottom: 24px; }
+.wagonList { display: flex; gap: 12px; margin-top: 10px; }
+.wagonBtn {
+  padding: 10px 20px;
+  border: 1px solid #cbd5e1;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.wagonBtn:hover { border-color: #3182ce; }
+.active { background-color: #3182ce; color: white; border-color: #3182ce; }

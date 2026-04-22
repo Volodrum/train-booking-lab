@@ -1,0 +1,60 @@
+.wagonContainer {
+  background-color: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.trainHead {
+  text-align: center;
+  font-weight: bold;
+  color: #64748b;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed #cbd5e1;
+}
+
+.seatGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  /* Робимо прохід посередині вагону */
+  justify-items: center;
+}
+
+.seatGrid > *:nth-child(even) { margin-right: 20px; } /* Прохід між 2 і 3 місцем у ряду */
+
+.seat {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seat:not(:disabled):hover { transform: scale(1.05); }
+
+.free { background-color: #48bb78; color: white; }
+.selected { background-color: #3182ce; color: white; box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.3); }
+.booked { background-color: #f56565; color: white; cursor: not-allowed; opacity: 0.6; }
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.legendItem {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
